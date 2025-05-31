@@ -1112,3 +1112,17 @@ export class ProductManager {
 
 // Экспорт для глобального доступа
 window.ProductManager = ProductManager;
+
+// Автоматическая инициализация при загрузке, если main.js не загружен
+if (typeof window !== 'undefined' && !window.productManagerInitialized) {
+    window.addEventListener('DOMContentLoaded', () => {
+        // Проверяем, не инициализирован ли уже менеджер из main.js
+        if (!window.productManager && 
+            (window.location.pathname === '/shop' || 
+             document.querySelector('.shop-container') || 
+             document.querySelector('.product-table'))) {
+            window.productManager = new ProductManager();
+            window.productManagerInitialized = true;
+        }
+    });
+}
