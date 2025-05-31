@@ -113,7 +113,7 @@
                 </svg>
                 <h3>Товары не найдены</h3>
                 <p>Попробуйте изменить параметры поиска или фильтры</p>
-                <button class="btn btn-primary" onclick="window.clearAllFilters()">Сбросить фильтры</button>
+                <button class="btn btn-primary" onclick="window.productManager?.clearAllFilters()">Сбросить фильтры</button>
             </div>
         </div>
     </div>
