@@ -10,7 +10,7 @@ import { showToast, fetchProducts } from './utils.js';
 import { renderProductsTable, copyText } from './renderProducts.js';
 import { createSpecification } from './specification.js';
 import { productService } from './services/ProductService.js';
-import { ShopManager } from './shop.js';
+import { ProductManager } from './ProductManager.js';
 
 // Инициализация глобальных переменных
 window.itemsPerPage = parseInt(sessionStorage.getItem('itemsPerPage') || '20', 10);
